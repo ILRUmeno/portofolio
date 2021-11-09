@@ -1,11 +1,33 @@
-@font-face {
-  font-family: CursiveText;
-  src: url(fonts/Blacksword.otf);
+@charset "UTF-8";
+@-webkit-keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    color: white;
+    background: none;
+    background-clip: unset;
+    text-shadow: 0 0 2px #00ECD8, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #00ECD8, 0 0 20px #00ECD8;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    color: transparent;
+    background: #24A075;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 1px -1px 5px #383536;
+  }
 }
-
-body {
-  margin: 0;
-  background-color: #1d1b1c;
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    color: white;
+    background: none;
+    background-clip: unset;
+    text-shadow: 0 0 2px #00ECD8, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #00ECD8, 0 0 20px #00ECD8;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    color: transparent;
+    background: #24A075;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 1px -1px 5px #383536;
+  }
 }
 
 .header {
@@ -30,12 +52,19 @@ body {
   padding: 0;
   margin: 0;
   font-weight: 900;
-  color: #00ECD8;
+  color: white;
   text-transform: uppercase;
   text-align: center;
   font-size: 45px;
   height: 0px;
-  text-shadow: 1px 1px 0 #d6fff8, 1px -1px 0 #d6fff8, -1px 1px 0 #d6fff8, -1px -1px 0 #d6fff8, 1px 0px 0 #d6fff8, 0px 1px 0 #d6fff8, -1px 0px 0 #d6fff8, 0px -1px 0 #d6fff8, 0px 0px 20px #24A075;
+  text-shadow: 0 0 2px #00ECD8, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #00ECD8, 0 0 20px #00ECD8;
+  letter-spacing: 6px;
+}
+
+.header h1 #broken:before {
+  content: 'n';
+  -webkit-animation: flicker 10s linear infinite;
+          animation: flicker 10s linear infinite;
 }
 
 .header h2 {
@@ -48,5 +77,73 @@ body {
   color: #24A075;
   letter-spacing: 5px;
   text-shadow: 0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, -0.5px -0.5px 0 white, 0.5px 0px 0 white, 0px 0.5px 0 white, -0.5px 0px 0 white, 0px -0.5px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: contents;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: justify;
+}
+
+.container .main .mainC {
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+.footer {
+  height: 50px;
+  background-color: #383536;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: Arial;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  border-top: 1px solid #00ECD8;
+  position: relative;
+  bottom: 0;
+}
+
+.footer #copyrightSign::after {
+  padding: 0 5px 0 0;
+  content: '©';
+}
+
+@font-face {
+  font-family: CursiveText;
+  src: url(fonts/Blacksword.otf);
+}
+
+body {
+  margin: 0;
+  background-color: #1d1b1c;
 }
 /*# sourceMappingURL=style.css.map */

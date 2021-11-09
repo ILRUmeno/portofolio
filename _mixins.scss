@@ -1,0 +1,67 @@
+
+
+
+@function neg($val) {
+    @return $val * -1
+};
+
+
+
+// color-> color of the outline
+// density-> density of the outline (px)
+// shadow-> if you want it to have shadow, then put the color of the shadow, else 'null'
+// blur-> blur for the shadow, if you want it (px), else 'null'
+@mixin outline($color, $density, $shadow, $blur){
+    @if $shadow == null{
+        text-shadow: 
+        $density $density 0 $color,
+        $density neg($density) 0 $color, 
+        neg($density) $density 0 $color, 
+        neg($density) neg($density) 0 $color, 
+        $density 0px 0 $color, 
+        0px $density 0 $color, 
+        neg($density) 0px 0 $color, 
+        0px neg($density) 0 $color, 
+        0px 0px 7px rgba(0,0,0,0);
+    }@else{
+        text-shadow: 
+        $density $density 0 $color, 
+        $density neg($density) 0 $color, 
+        neg($density) $density 0 $color, 
+        neg($density) neg($density) 0 $color, 
+        $density 0px 0 $color, 
+        0px $density 0 $color, 
+        neg($density) 0px 0 $color, 
+        0px neg($density) 0 $color, 
+        0px 0px $blur $shadow;
+    }
+    
+}
+
+
+@mixin glow($color){
+    text-shadow: 
+    0 0 2px $color,
+    0 0 5px #FFF, 
+    0 0 10px #FFF,  
+    0 0 15px $color, 
+    0 0 20px $color, 
+}
+
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        color: white;
+        background: none;
+        background-clip: unset;
+		@include glow($cGreen);
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		color: transparent;
+        background: $cDrkGreen;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        text-shadow: 1px -1px 5px $cBlack;
+	}
+};
