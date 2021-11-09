@@ -1,0 +1,27 @@
+
+$primaryFonts: Arial;
+$cBlack: #383536;
+$cBlackGreen: #3c4b45;
+$cMiddle: #3A5E52;
+$cDrkGreen: #24A075;
+$cGreen: #00ECD8;
+
+// shiftRight (positive = right, negative = left)   px
+// shiftDown (positive = down, negative = up)       px
+// blur                                             px
+// color can be either #HEX or RGBA (RGBA grants the opacity)
+@mixin textShadow($shiftRight, $shiftDown, $blur, $color){
+    text-shadow: $shiftRight $shiftDown $blur $color;
+}
+
+.header{
+    height: 10px;
+    font-family: $primaryFonts;
+    background-color: $cBlack;
+    h1{
+        font-weight: 900;
+        color: $cGreen;
+        @include textShadow(0, 0, 5px, $cDrkGreen);
+    }
+
+}
