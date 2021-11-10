@@ -9,14 +9,33 @@
     color: white;
     h1{
         text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .main{
         display: flex;
         width: 100%;
         text-align: justify;
-        .mainC{
+        .mainA, .mainB, .mainC{
             width: 33.33%;
             padding: 0 10px;
+            height: 500px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            h1{
+                text-align: left;
+            }
+        }
+
+        .mainB{
+            background-color: $cBlack;
+        }
+
+        .mainC{
+            background: url(https://i.gifer.com/origin/82/82a1ed531e333926a8ca2a00c277e0d1.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 }

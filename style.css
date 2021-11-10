@@ -76,7 +76,7 @@
   font-size: 30px;
   color: #24A075;
   letter-spacing: 5px;
-  text-shadow: 0.5px 0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, -0.5px -0.5px 0 white, 0.5px 0px 0 white, 0px 0.5px 0 white, -0.5px 0px 0 white, 0px -0.5px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+  text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
 }
 
 .container {
@@ -94,6 +94,8 @@
 
 .container h1 {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .container .main {
@@ -104,9 +106,32 @@
   text-align: justify;
 }
 
-.container .main .mainC {
+.container .main .mainA, .container .main .mainB, .container .main .mainC {
   width: 33.33%;
   padding: 0 10px;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main .mainA h1, .container .main .mainB h1, .container .main .mainC h1 {
+  text-align: left;
+}
+
+.container .main .mainB {
+  background-color: #383536;
+}
+
+.container .main .mainC {
+  background: url(https://i.gifer.com/origin/82/82a1ed531e333926a8ca2a00c277e0d1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .footer {
@@ -123,7 +148,7 @@
           align-items: center;
   color: white;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 15px;
   font-family: Arial;
   letter-spacing: 3px;
   text-shadow: 0 0 5px black, 0 0 5px black;
