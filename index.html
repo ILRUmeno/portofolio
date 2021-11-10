@@ -9,6 +9,19 @@
         <title>Hello World!</title>
         <link rel="stylesheet" href="sass/welcome.css">
         <link rel="icon" href="icon.png">
+        <script>
+            var delayInMilliseconds = 10000;
+
+            setTimeout(function() {
+                $(document).keypress(function(event){
+                    var keycode = (event.keyCode ? event.keyCode : event.which);
+                    if(keycode == '32'){
+                        window.location.href = "homepage.html";
+                    }
+                });
+            }, delayInMilliseconds);
+            
+        </script>
     </head>
     <body>
         <div id="highlight"></div>
@@ -16,5 +29,8 @@
         
         <div class="helloWorld"><span id="hw"></span><i id="flickeringThing"> </i></div>
         <div id="oldTV"></div>
+        <div class="pressKey">
+            <p>Press Space to continue...</p>
+        </div>
     </body>
 </html>

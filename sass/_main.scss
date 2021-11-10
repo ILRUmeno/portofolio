@@ -7,35 +7,50 @@
     justify-content: center;
     align-items: center;
     color: white;
-    h1{
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+    letter-spacing: 3px;
     .main{
+        margin: 100px auto 0 auto;
+        padding: 25px;
         display: flex;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        width: 900px;
+        height: 600px;
         text-align: justify;
-        .mainA, .mainB, .mainC{
-            width: 33.33%;
-            padding: 0 10px;
-            height: 500px;
-            display: grid;
-            justify-content: center;
-            align-items: center;
+        background-color: $cBlack;
+        border: 1px solid white;
+        border-radius: 50px;
+        box-shadow: 0 0 20px 0 $cGreen;
+        .text{
+            padding: 15px 20px 15px 15px;
+            text-shadow: 0 0 5px black, 0 0 5px black;
             h1{
-                text-align: left;
+                @include outline(white, 1px, null, null);
+                color: $cDrkGreen;
+                font-family: CursiveText;
+                font-size: 50px;
+            }
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
             }
         }
-
-        .mainB{
-            background-color: $cBlack;
-        }
-
-        .mainC{
-            background: url(https://i.gifer.com/origin/82/82a1ed531e333926a8ca2a00c277e0d1.gif);
-            background-repeat: no-repeat;
-            background-size: cover;
+        .image{
+            text-transform: capitalize;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.685);
+            text-align: center;
+            img{
+                width: 400px;
+                height: auto;
+                border-radius: 5px;
+                border-bottom: 2px solid $cGreen;
+                box-shadow: 0 0 10px 0 black;
+            }
+            p{
+                text-shadow: 0 0 5px black, 0 0 5px black;
+                padding-top: 5px;
+            }
         }
     }
 }

@@ -33,22 +33,35 @@
 .header {
   height: 100px;
   margin: 0;
+  padding: 15px;
   font-family: Arial;
   background-color: #383536;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-shadow: 0px 0px 30px 15px #000000;
           box-shadow: 0px 0px 30px 15px #000000;
   border-bottom: 2px solid #00ECD8;
+  cursor: default;
 }
 
-.header h1 {
+.header .header1 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header1 h1 {
   padding: 0;
   margin: 0;
   font-weight: 900;
@@ -61,22 +74,70 @@
   letter-spacing: 6px;
 }
 
-.header h1 #broken:before {
+.header .header1 h1 #broken:before {
   content: 'n';
   -webkit-animation: flicker 10s linear infinite;
           animation: flicker 10s linear infinite;
 }
 
-.header h2 {
+.header .header1 h2 {
   padding: 0;
-  margin: 15px 0 0 0;
-  text-align: center;
+  margin: 35px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -ms-flex-line-pack: center;
+      align-content: center;
   font-style: italic;
   font-family: CursiveText;
   font-size: 30px;
   color: #24A075;
   letter-spacing: 5px;
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+}
+
+.header .header2 {
+  color: white;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header2 li {
+  text-decoration: none;
+  display: inline;
+  padding-left: 50px;
+}
+
+.header .header2 li a {
+  color: #24A075;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.header .header2 li a:hover {
+  color: white;
+  text-shadow: 0 0 10px #00ECD8, 0 0 10px #00ECD8;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 .container {
@@ -90,52 +151,72 @@
       -ms-flex-align: center;
           align-items: center;
   color: white;
-}
-
-.container h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  letter-spacing: 3px;
 }
 
 .container .main {
+  margin: 100px auto 0 auto;
+  padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  text-align: justify;
-}
-
-.container .main .mainA, .container .main .mainB, .container .main .mainC {
-  width: 33.33%;
-  padding: 0 10px;
-  height: 500px;
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.container .main .mainA h1, .container .main .mainB h1, .container .main .mainC h1 {
-  text-align: left;
-}
-
-.container .main .mainB {
+  width: 900px;
+  height: 600px;
+  text-align: justify;
   background-color: #383536;
+  border: 1px solid white;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px 0 #00ECD8;
+          box-shadow: 0 0 20px 0 #00ECD8;
 }
 
-.container .main .mainC {
-  background: url(https://i.gifer.com/origin/82/82a1ed531e333926a8ca2a00c277e0d1.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+.container .main .text {
+  padding: 15px 20px 15px 15px;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+}
+
+.container .main .text h1 {
+  text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+  color: #24A075;
+  font-family: CursiveText;
+  font-size: 50px;
+}
+
+.container .main .text p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+.container .main .image {
+  text-transform: capitalize;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.685);
+  text-align: center;
+}
+
+.container .main .image img {
+  width: 400px;
+  height: auto;
+  border-radius: 5px;
+  border-bottom: 2px solid #00ECD8;
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+}
+
+.container .main .image p {
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  padding-top: 5px;
 }
 
 .footer {
   height: 50px;
+  width: 100%;
   background-color: #383536;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +234,7 @@
   letter-spacing: 3px;
   text-shadow: 0 0 5px black, 0 0 5px black;
   border-top: 1px solid #00ECD8;
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 

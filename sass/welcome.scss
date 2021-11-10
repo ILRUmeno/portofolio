@@ -82,6 +82,33 @@ body{
         }
     }
 
+    .pressKey{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: monospace;
+        font-size: 15px;
+        letter-spacing: 4px;
+        color: rgba(255, 255, 255, 0.322);
+        text-shadow: 0 0 5px white, 0 0 1px rgba(255, 255, 255, 0.555);
+        z-index: 4;
+        opacity: 0;
+        animation: appear 1s ease-in 10s 1 normal forwards;
+    }
+
+    @keyframes appear{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
     @keyframes flick{
         0%, 9.999%, 20%, 29.999%, 40%, 49.999%, 60%, 69.999%, 80%, 89.999%{
             content:'_';

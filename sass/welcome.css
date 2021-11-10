@@ -125,6 +125,49 @@ body .helloWorld #flickeringThing:before {
           animation: flick 6s ease 8.5s infinite;
 }
 
+body .pressKey {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.322);
+  text-shadow: 0 0 5px white, 0 0 1px rgba(255, 255, 255, 0.555);
+  z-index: 4;
+  opacity: 0;
+  -webkit-animation: appear 1s ease-in 10s 1 normal forwards;
+          animation: appear 1s ease-in 10s 1 normal forwards;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes flick {
   0%, 9.999%, 20%, 29.999%, 40%, 49.999%, 60%, 69.999%, 80%, 89.999% {
     content: '_';
