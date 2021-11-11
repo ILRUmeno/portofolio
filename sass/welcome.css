@@ -71,8 +71,6 @@ body #vignette {
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, transparent 53%, transparent 53%, #000000 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='#000000',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   position: absolute;
   z-index: 2;
 }

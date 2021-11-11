@@ -1,0 +1,96 @@
+
+
+.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $cBlack; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  $cBlack 53%, $cBlack 53%, #262425 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  $cBlack 53%,$cBlack 53%,#262425 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  $cBlack 53%,$cBlack 53%,#262425 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    .loadingText{
+        font-family: $primaryFonts;
+        background-color: $cBlack;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        cursor: default;
+        position: absolute;
+        transition: ease-in-out 1s;
+        h1{
+            padding: 0;
+            margin: 0;
+            font-weight: 900;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 75px;
+            height: 0px;
+            @include glow($cGreen);
+            letter-spacing: 6px;
+            transition: ease-in-out 1s;
+        }
+        h2{
+            padding: 0;
+            margin: 65px 0 0 0;
+            text-align:center;
+            align-content: center;
+            font-style: italic;
+            font-family: CursiveText;
+            font-size: 60px;
+            color: $cDrkGreen;
+            letter-spacing: 5px;
+            @include outline(white, 1px, black, 10px);
+            transition: ease-in-out 1s;
+
+        }
+
+    }
+    #loadingBar{
+        width: 100%;
+        height: 10px;
+        background-color: $cDark;
+        display: flex;
+        justify-content: end;
+        bottom: 0;
+        position: absolute;
+        z-index: 2;
+
+        div{
+            width: -1px;
+            height: 10px;
+            display: flex;
+            box-shadow: 0 0 10px 2px $cGreen;
+            background: white;
+            background: -moz-radial-gradient(center, ellipse cover,  white 53%, white 53%, $cGreen 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover,  white 53%,white 53%,$cGreen 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(0deg,  white 53%,white 53%,$cGreen 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            left: 0;
+            position: absolute;
+            z-index: 3;
+            animation: load 3s 2s forwards;
+        }
+    }
+}
+
+@keyframes load{
+    0%{
+        width: 0%;
+    }
+    20%, 40%{
+        width:20%;
+    }
+    50%{
+        width:30%;
+    }
+    70%, 80%{
+        width: 80%;
+    }
+    100%{
+        width: 100%;
+    }
+}

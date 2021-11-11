@@ -1,0 +1,425 @@
+$w: 20px;
+$h: 20px;
+$drkBlue: rgb(33, 67, 139);
+$drkYellow: rgb(185, 185, 0);
+$green: rgb(43, 185, 0);
+$drkGreen: rgb(27, 117, 0);
+$drkSkin: rgb(207, 186, 154);
+$evenDrkBlue: rgb(24, 48, 102);
+$lgtBlue: #2853af;
+$skin: rgb(255, 230, 193);
+.WorkingArea{
+    display: none;
+}
+.worker{
+    position: absolute;
+    margin-top: 50px;
+    .w-hat{
+        width: $w+2;
+        height: $h/2 +2;
+        background: rgb(255,237,109);
+        background: linear-gradient(90deg, rgba(255,237,109,1) 0%, rgba(255,237,109,1) 21%, rgba(194,155,73,1) 21%, rgba(194,155,73,1) 22%, rgba(255,208,109,1) 22%, rgba(255,208,109,1) 32%, rgba(255,237,109,1) 32%, rgba(255,237,109,1) 66%, rgba(194,155,73,1) 66%, rgba(194,155,73,1) 67%, rgba(255,208,109,1) 67%, rgba(255,208,109,1) 77%, rgba(255,237,109,1) 77%, rgba(255,237,109,1) 100%);
+        position: absolute;
+        z-index: 2;
+        border-top-left-radius: $h/2 +12;  /* 20px of height + 12px of border */
+        border-top-right-radius: $h/2 +12; /* 20px of height + 12px of border */
+        margin-left: -1px;
+        margin-top: -2px;
+    }
+    .w-Head{
+        width: $w;
+        height: $h;
+        background-color: $skin;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+    }
+    .w-Pants{
+        width: $w+2;
+        height: $h - 2;
+        margin-top: $h*2 - 6;
+        margin-left: -1px;
+        background-color: $drkBlue;
+        position: absolute;
+        z-index: 2;
+        border-radius: 0 0 500px 500px;
+        .w-suspendersL{
+            width: 3px;
+            height: $h+2;
+            background-color: $lgtBlue;
+            margin-left: 5px;
+            margin-top: -$h + 5;
+        }
+        .w-suspendersR{
+            width: 3px;
+            height: $h+2;
+            background-color: $lgtBlue;
+            margin-left: 15px;
+            margin-top: -$h - 2;
+        }
+    }
+
+    
+    .w-Body{
+        width: $w+2;
+        height: $h*2 - 5;
+        margin-top: $h - 3;
+        margin-left: -1px;
+        position: absolute;
+        background-color: yellow;
+        border-radius: 500px;
+    }
+    .w-LLeg{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, rgb(24, 24, 24) 30%, $evenDrkBlue 30%);
+        margin-top: 45px;
+        margin-left: 10px;
+        transform-origin: top;
+    }
+    .w-LHand{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, $drkSkin 50%, $drkYellow 50%);
+        margin-top: 20px;
+        margin-left: 14px;
+        border-radius: 500px 500px 0 500px;
+        
+    }
+    .w-RLeg{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, rgba(71,71,71,1) 30%, $drkBlue 30%);
+        margin-top: 45px;
+        transform-origin: top;
+        z-index: 2;
+    }
+    .w-RHand{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, $skin 50%, yellow 50%);
+        margin-top: 19px;
+        margin-left: -3px;
+        border-radius: 500px 500px 500px 0;
+        z-index: 2;
+    }
+
+    .w-Shadow{
+        width: $w+6;
+        height: 7px;
+        background-color: black;
+        position: absolute;
+        margin-left: -4px;
+        margin-top: 67px;
+        border-radius: 50%;
+        opacity: 0.3;
+        box-shadow: 0 0 5px 5px black;
+    }
+}
+
+.ladder{
+    position: absolute;
+    .poleL{
+        background-color: gray;
+        width: 5px;
+        height: 120px;
+        position: absolute;
+    }
+    @for $var from 1 to 6 {
+        .step#{$var}{
+            background-color: gray;
+            width: 30px;
+            height: 4px;
+            margin-left: 2px;
+            margin-top: 4px * $var*4.7;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    
+
+    .poleR{
+        width: 5px;
+        height: 120px;
+        position: absolute;
+        background-color: rgb(97, 97, 97);
+        margin-left: 30px;
+    }
+}
+
+.hammeringWorker{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 8px;
+    z-index: 2;
+
+    .hw-hat{
+        width: $w+2;
+        height: $h/2 +2;
+        background: rgb(255,237,109);
+        background: linear-gradient(90deg, rgba(255,237,109,1) 0%, rgba(255,237,109,1) 21%, rgba(194,155,73,1) 21%, rgba(194,155,73,1) 22%, rgba(255,208,109,1) 22%, rgba(255,208,109,1) 32%, rgba(255,237,109,1) 32%, rgba(255,237,109,1) 66%, rgba(194,155,73,1) 66%, rgba(194,155,73,1) 67%, rgba(255,208,109,1) 67%, rgba(255,208,109,1) 77%, rgba(255,237,109,1) 77%, rgba(255,237,109,1) 100%);
+        position: absolute;
+        z-index: 2;
+        border-top-left-radius: $h/2 +12;  /* 20px of height + 12px of border */
+        border-top-right-radius: $h/2 +12; /* 20px of height + 12px of border */
+        margin-left: -1px;
+        margin-top: -2px;
+    }
+    .hw-Head{
+        width: $w;
+        height: $h;
+        background-color: $skin;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+    }
+    .hw-Pants{
+        width: $w+2;
+        height: $h - 2;
+        margin-top: $h*2 - 6;
+        margin-left: -1px;
+        background-color: $drkBlue;
+        position: absolute;
+        z-index: 2;
+        border-radius: 0 0 500px 500px;
+        .hw-suspendersL{
+            width: 3px;
+            height: $h+2;
+            background-color: $lgtBlue;
+            margin-left: 5px;
+            margin-top: -$h + 5;
+        }
+        .hw-suspendersR{
+            width: 3px;
+            height: $h+2;
+            background-color: $lgtBlue;
+            margin-left: 15px;
+            margin-top: -$h - 2;
+        }
+    }
+    .hw-Body{
+        width: $w+2;
+        height: $h*2 - 5;
+        margin-top: $h - 3;
+        margin-left: -1px;
+        position: absolute;
+        background-color: $green;
+        border-radius: 500px;
+    }
+    .hw-LLeg{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, rgb(24, 24, 24) 30%, $evenDrkBlue 30%);
+        margin-top: 45px;
+        margin-left: 10px;
+        transform-origin: top;
+    }
+    .hw-LHand{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, $drkSkin 50%, $drkGreen 50%);
+        margin-top: 25px;
+        margin-left: 14px;
+        border-radius: 500px 500px 0 500px;
+        transform-origin: top;
+        animation: hammering 2s linear infinite;
+
+        .hw-HammerHandle{
+            width: 15px;
+            height: 5px;
+            background-color: rgb(102, 84, 57);
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 5px;
+
+            .hw-Hammer{
+                width: 8px;
+                height: 15px;
+                background-color: rgb(63, 63, 63);
+                position: absolute;
+                margin-top: -5px;
+                margin-left: 15px;
+            }
+        }
+    }
+    .hw-RLeg{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, rgba(71,71,71,1) 30%, $drkBlue 30%);
+        margin-top: 45px;
+        transform-origin: top;
+        z-index: 2;
+    }
+    .hw-RHand{
+        width: $w/2;
+        height: $h+5;
+        position: absolute;
+        background: linear-gradient(0deg, $skin 50%, $green 50%);
+        margin-top: 19px;
+        margin-left: -3px;
+        border-radius: 500px 500px 500px 0;
+        z-index: 2;
+    }
+    .hw-Shadow{
+        width: $w+8;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+        margin-left: -4px;
+        margin-top: 150px;
+        border-radius: 50%;
+        opacity: 0.3;
+        box-shadow: 0 0 5px 5px black;
+    }
+}
+
+.stripe{
+    background: repeating-linear-gradient(45deg,yellow,yellow 10px,orange 10px,orange 20px);
+    width: 500px;
+    height: 12px;
+    position: absolute;
+    z-index: 9;
+    margin-top: 100px;
+    margin-left: -4px;
+    p{
+        margin: 0;
+        padding: 0;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 5px;
+        text-align:center;
+        font-size: 10px;
+        margin-top: -1px;
+    }
+
+    .stand2{
+        background-color: gray;
+        width: 20px;
+        height: 15px;
+        border-radius: 500px;
+        margin-top: 30px;
+        margin-left: 486px;
+        border-bottom: 3px solid rgb(68, 68, 68);
+        position: absolute;
+
+        .wood{
+            background-color: rgb(88, 64, 44);
+            width: 6px;
+            height: 40px;
+            margin-left: 7px;
+            margin-top: -32px;
+            position: absolute;
+            border-radius: 0 0 500px 500px;
+        }
+    }
+
+    .stand1{
+        background-color: gray;
+        width: 20px;
+        height: 15px;
+        border-radius: 500px;
+        margin-top: 30px;
+        margin-left: -6px;
+        border-bottom: 3px solid rgb(68, 68, 68);
+        position: absolute;
+
+        .wood{
+            background-color: rgb(88, 64, 44);
+            width: 6px;
+            height: 40px;
+            margin-left: 7px;
+            margin-top: -32px;
+            position: absolute;
+            border-radius: 0 0 500px 500px;
+        }
+    }
+    .stripeShadow{
+        width: 510px;
+        height: 6px;
+        background-color: black;
+        position: absolute;
+        margin-left: -4px;
+        margin-top: 40px;
+        border-radius: 500px;
+        opacity: 0.2;
+        box-shadow: 0 0 5px 5px black;
+    }
+}
+
+@keyframes hammering {
+    // TIMELINE
+    // 0%     50%    100%
+    // 0      -       0
+    0%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: rotate(-100deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+
+}
+
+
+@keyframes rightLegMove{
+    // TIMELINE
+    // 0%    25%     50%     75%    100%
+    // 0      -       0       +      0  
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(-15deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(15deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes leftLegMove{
+    // TIMELINE
+    // 0%    25%     50%     75%    100%
+    // 0      +       0       -      0  
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(15deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    75%{
+        transform: rotate(-15deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
