@@ -89,7 +89,7 @@
     }
 
     @include responsive(mobile tablet){
-        height: 220px;
+        height: 274px;
         display: block;
         padding: 0;
         .header1{
@@ -108,12 +108,23 @@
         }
 
         .header2{
+            width: 100vw;
             padding: 0;
+            display: grid;
+            //color: white;
             li{
-                width: 33.33vw;
-                text-align: center;
-                font-size: 30px;
+                width: 100vw;
+                font-size: 25px;
                 padding: 0;
+                text-align: center;
+                letter-spacing: 1px;
+                border-bottom: 2px outset #767676;
+                background: linear-gradient(0deg, #222222 0%, transparent 50%);
+                border-top: 1px inset white;
+                a{
+                    color: white;
+                    text-shadow: 0 0 10px $cGreen, 0 0 5px $cGreen;
+                }
             }
         }
     };

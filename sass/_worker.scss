@@ -1,3 +1,4 @@
+@import 'media';
 $w: 20px;
 $h: 20px;
 $drkBlue: rgb(33, 67, 139);
@@ -10,6 +11,7 @@ $lgtBlue: #2853af;
 $skin: rgb(255, 230, 193);
 .WorkingArea{
     display: none;
+    height: 150px;
 }
 .worker{
     position: absolute;
@@ -352,8 +354,24 @@ $skin: rgb(255, 230, 193);
         opacity: 0.2;
         box-shadow: 0 0 5px 5px black;
     }
-}
 
+    
+}
+@include responsive(mobile tablet){
+        .stripe{
+            width: 70vw;
+            .stand2{
+                position: initial;
+                margin-right: -7px;
+                float: right;
+            }
+            .stripeShadow{
+                width: 71.5vw;
+            }
+        }
+
+        
+    };
 @keyframes hammering {
     // TIMELINE
     // 0%     50%    100%

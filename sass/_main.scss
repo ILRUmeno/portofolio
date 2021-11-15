@@ -55,17 +55,36 @@
     }
 
     .mainContacts{
-        margin: 80px auto 0 auto;
+        margin: 50px auto 0 auto;
         padding: 25px;
         display: flex;
         justify-content: center;
         width: 1100px;
-        height: 700px;
+        //height: 750px;
         text-align: justify;
         background-color: $cBlack;
         border: 1px solid white;
         border-radius: 50px;
         box-shadow: 0 0 20px 0 $cGreen;
+
+        img{
+            width: 250px;
+            height: auto;
+            border-radius: 5px;
+            border-bottom: 2px solid $cGreen;
+            box-shadow: 0 0 10px 0 black;
+        }
+
+        #dets{
+            text-transform: capitalize;
+            font-style: italic;
+            width: 250px;
+            font-size: 15px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.685);
+            text-shadow: 0 0 5px black, 0 0 5px black;
+            padding-top: 5px;
+        }
         h1{
             margin-top: 20px;
             @include outline(white, 1px, null, null);
@@ -73,11 +92,116 @@
             font-family: CursiveText;
             font-size: 45px;
             letter-spacing: 5px;
+            font-weight: 700;
         }
-
+        a{
+            color: white;
+            font-size: 20px;
+            text-shadow: 0 0 5px $cGreen, 0 0 5px $cGreen;
+        }
         .damaged{
             transform-origin: top left;
             transform: rotate(10deg);
+        }
+
+        .sColumn{
+            a{
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .socialMedia{
+            text-align: center;
+            h2{
+                font-size: 35px;
+                font-weight: 700;
+                text-align: center;
+                color: $cDrkGreen;
+                font-family: CursiveText;
+                @include outline(white, 1px, null, null);
+            }
+            a{
+                font-size: 35px;
+                margin: 5px;
+            }
+            
+            .col{
+                padding: 15px;
+            }
+
+            #instagram{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    background:linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #623ca0);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+
+            #twitter{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #00acee;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+            
+            #twitch{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #9146ff;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+
+            #github{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #171515;
+                    filter: drop-shadow(0 0 2px white);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+            
+            #discord{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #7289d9;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+
+            #linkedin{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #0077b5;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+
+            #reddit{
+                transition: ease-in-out 0.1s;
+                &:hover{
+                    text-shadow: none;
+                    color: #ff4500;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+            }
+            
         }
     }
 
@@ -90,12 +214,93 @@
             height: auto;
             display: block;
             border-radius: 30px;
+
+            .image{
+                img{
+                    width: 75vw;
+                }
+            }
         }
 
         .mainContacts{
             width: 95vw;
             border-radius: 30px;
             display: block;
+            img{
+                display: block;
+                margin: auto;
+                margin-top: 10px;
+            }
+            #dets{
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            .sColumn{
+                font-size: 15px;
+                a{
+                    font-size: 15px;
+                }
+            }
+
+            .socialMedia{
+                h2{
+                    font-size: 50px;
+                }
+                a{
+                    font-size: 50px;
+                }
+                #instagram{
+                    text-shadow: none;
+                    background:linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #623ca0);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+                #twitter{
+                    text-shadow: none;
+                    color: #00acee;
+                    filter: drop-shadow(0 0 2px black);
+                    transition: ease-in-out 0.1s;
+                }
+                
+                #twitch{
+                        text-shadow: none;
+                        color: #9146ff;
+                        filter: drop-shadow(0 0 2px black);
+                        transition: ease-in-out 0.1s;
+                }
+    
+                #github{
+                        text-shadow: none;
+                        color: #171515;
+                        filter: drop-shadow(0 0 2px white);
+                        transition: ease-in-out 0.1s;
+                }
+                
+                #discord{
+                        text-shadow: none;
+                        color: #7289d9;
+                        filter: drop-shadow(0 0 2px black);
+                        transition: ease-in-out 0.1s;
+                }
+    
+                #linkedin{
+                        text-shadow: none;
+                        color: #0077b5;
+                        filter: drop-shadow(0 0 2px black);
+                        transition: ease-in-out 0.1s;
+                }
+    
+                #reddit{
+                        text-shadow: none;
+                        color: #ff4500;
+                        filter: drop-shadow(0 0 2px black);
+                        transition: ease-in-out 0.1s;
+                }
+            }
         }
+
     };
 }

@@ -97,6 +97,10 @@
     }
 }
 
+body{
+    overflow: hidden;
+}
+
 @keyframes load{
     0%{
         width: 0%;

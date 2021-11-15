@@ -168,7 +168,7 @@
 
 @media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
   .header {
-    height: 220px;
+    height: 274px;
     display: block;
     padding: 0;
   }
@@ -193,13 +193,25 @@
             justify-content: center;
   }
   .header .header2 {
+    width: 100vw;
     padding: 0;
+    display: -ms-grid;
+    display: grid;
   }
   .header .header2 li {
-    width: 33.33vw;
-    text-align: center;
-    font-size: 30px;
+    width: 100vw;
+    font-size: 25px;
     padding: 0;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 2px outset #767676;
+    background: -webkit-gradient(linear, left bottom, left top, from(#222222), color-stop(50%, transparent));
+    background: linear-gradient(0deg, #222222 0%, transparent 50%);
+    border-top: 1px inset white;
+  }
+  .header .header2 li a {
+    color: white;
+    text-shadow: 0 0 10px #00ECD8, 0 0 5px #00ECD8;
   }
 }
 
@@ -291,7 +303,7 @@
 }
 
 .container .mainContacts {
-  margin: 80px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,13 +312,32 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 1100px;
-  height: 700px;
   text-align: justify;
   background-color: #383536;
   border: 1px solid white;
   border-radius: 50px;
   -webkit-box-shadow: 0 0 20px 0 #00ECD8;
           box-shadow: 0 0 20px 0 #00ECD8;
+}
+
+.container .mainContacts img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  border-bottom: 2px solid #00ECD8;
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+}
+
+.container .mainContacts #dets {
+  text-transform: capitalize;
+  font-style: italic;
+  width: 250px;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.685);
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  padding-top: 5px;
 }
 
 .container .mainContacts h1 {
@@ -316,6 +347,13 @@
   font-family: CursiveText;
   font-size: 45px;
   letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.container .mainContacts a {
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 5px #00ECD8, 0 0 5px #00ECD8;
 }
 
 .container .mainContacts .damaged {
@@ -323,6 +361,133 @@
           transform-origin: top left;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+}
+
+.container .mainContacts .sColumn a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.container .mainContacts .socialMedia {
+  text-align: center;
+}
+
+.container .mainContacts .socialMedia h2 {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #24A075;
+  font-family: CursiveText;
+  text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+}
+
+.container .mainContacts .socialMedia a {
+  font-size: 35px;
+  margin: 5px;
+}
+
+.container .mainContacts .socialMedia .col {
+  padding: 15px;
+}
+
+.container .mainContacts .socialMedia #instagram {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #instagram:hover {
+  text-shadow: none;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #623ca0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #twitter {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #twitter:hover {
+  text-shadow: none;
+  color: #00acee;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #twitch {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #twitch:hover {
+  text-shadow: none;
+  color: #9146ff;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #github {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #github:hover {
+  text-shadow: none;
+  color: #171515;
+  -webkit-filter: drop-shadow(0 0 2px white);
+          filter: drop-shadow(0 0 2px white);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #discord {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #discord:hover {
+  text-shadow: none;
+  color: #7289d9;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #linkedin {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #linkedin:hover {
+  text-shadow: none;
+  color: #0077b5;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #reddit {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.container .mainContacts .socialMedia #reddit:hover {
+  text-shadow: none;
+  color: #ff4500;
+  -webkit-filter: drop-shadow(0 0 2px black);
+          filter: drop-shadow(0 0 2px black);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 @media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
@@ -333,10 +498,92 @@
     display: block;
     border-radius: 30px;
   }
+  .container .main .image img {
+    width: 75vw;
+  }
   .container .mainContacts {
     width: 95vw;
     border-radius: 30px;
     display: block;
+  }
+  .container .mainContacts img {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .container .mainContacts #dets {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .container .mainContacts .sColumn {
+    font-size: 15px;
+  }
+  .container .mainContacts .sColumn a {
+    font-size: 15px;
+  }
+  .container .mainContacts .socialMedia h2 {
+    font-size: 50px;
+  }
+  .container .mainContacts .socialMedia a {
+    font-size: 50px;
+  }
+  .container .mainContacts .socialMedia #instagram {
+    text-shadow: none;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #623ca0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #twitter {
+    text-shadow: none;
+    color: #00acee;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #twitch {
+    text-shadow: none;
+    color: #9146ff;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #github {
+    text-shadow: none;
+    color: #171515;
+    -webkit-filter: drop-shadow(0 0 2px white);
+            filter: drop-shadow(0 0 2px white);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #discord {
+    text-shadow: none;
+    color: #7289d9;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #linkedin {
+    text-shadow: none;
+    color: #0077b5;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .container .mainContacts .socialMedia #reddit {
+    text-shadow: none;
+    color: #ff4500;
+    -webkit-filter: drop-shadow(0 0 2px black);
+            filter: drop-shadow(0 0 2px black);
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
   }
 }
 
@@ -373,10 +620,9 @@
   letter-spacing: 3px;
   text-shadow: 0 0 5px black, 0 0 5px black;
   border-top: 1px solid #00ECD8;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  top: 13vh;
   z-index: 0;
-  margin-top: 80px;
 }
 
 .footer #copyrightSign::after {
@@ -387,8 +633,9 @@
 @media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
   .footer {
     position: relative;
+    top: 0;
     margin-top: 60px;
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
@@ -532,6 +779,10 @@
           animation: load 3s 2s forwards;
 }
 
+body {
+  overflow: hidden;
+}
+
 @-webkit-keyframes load {
   0% {
     width: 0%;
@@ -568,8 +819,22 @@
   }
 }
 
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 .WorkingArea {
   display: none;
+  height: 150px;
 }
 
 .worker {
@@ -996,6 +1261,20 @@
           box-shadow: 0 0 5px 5px black;
 }
 
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .stripe {
+    width: 70vw;
+  }
+  .stripe .stand2 {
+    position: initial;
+    margin-right: -7px;
+    float: right;
+  }
+  .stripe .stripeShadow {
+    width: 71.5vw;
+  }
+}
+
 @-webkit-keyframes hammering {
   0% {
     -webkit-transform: rotate(-180deg);
@@ -1158,5 +1437,6 @@
 body {
   margin: 0;
   background-color: #1d1b1c;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

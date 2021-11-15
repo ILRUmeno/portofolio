@@ -13,10 +13,9 @@
     letter-spacing: 3px;
     text-shadow: 0 0 5px black, 0 0 5px black;
     border-top: 1px solid $cGreen;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    top: 13vh;
     z-index: 0;
-    margin-top: 80px;
     #copyrightSign::after{
         padding: 0 5px 0 0;
         content: '©';
@@ -24,7 +23,8 @@
 
     @include responsive(mobile tablet){
         position: relative;
+        top: 0;
         margin-top: 60px;
-        font-size: 13px
+        font-size: 11px
     };
 }

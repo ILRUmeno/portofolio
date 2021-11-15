@@ -9,28 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
     <title>JFP | HomePage</title>
-
-
-    <script>
-        $(document).ready(function(){
-            if(sessionStorage.getItem('firstTime') === "false" && $(".loading").is(":visible")){
-                $(".loading").hide();
-            }else if(sessionStorage.getItem('firstTime') === null){
-                setTimeout(function(){
-                    console.log($("#loadingBar").find("div").css("width") + "     "+ $("#loadingBar").css("width") );
-                    if( $("#loadingBar").find("div").css("width") === $("#loadingBar").css("width")){
-                        $(".loadingText").find("h2").animate({marginLeft: "300px", fontSize: "30px", marginTop: "35px"}, {duration: 100, queue: false});
-                        $(".loadingText").find("h1").animate({fontSize: "45px"}, {duration: 100, queue: false});
-                        $(".loadingText").animate({top:"0", left:"0", marginTop: "16px", marginLeft: "13px"}, {duration: 100, queue: false});
-                        $(".loading").fadeOut(1000, "linear" );
-                        sessionStorage.setItem('firstTime', false);
-                    }
-                }, 6000);
-            }
-        });
-        
-            
-    </script>
+    <script src="scripts/load.js"></script>
 </head>
 <body>
     <div class="loading">
