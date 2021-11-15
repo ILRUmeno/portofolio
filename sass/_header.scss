@@ -1,4 +1,4 @@
-
+@import 'media';
 .header{
     height: 100px;
     margin: 0;
@@ -11,10 +11,12 @@
     box-shadow: 0px 0px 30px 15px #000000;
     border-bottom: 2px solid $cGreen;
     cursor: default;
+    transition: ease-in-out 0.5s;
     .header1{
         display: grid;
         justify-content: left;
         align-items: center;
+        transition: ease-in-out 0.5s;
         h1{
             padding: 0;
             margin: 0;
@@ -26,6 +28,7 @@
             height: 0px;
             @include glow($cGreen);
             letter-spacing: 6px;
+            transition: ease-in-out 0.5s;
             #broken{
                 &:before{
                     content: 'n';
@@ -45,6 +48,7 @@
             color: $cDrkGreen;
             letter-spacing: 5px;
             @include outline(white, 1px, null, null);
+            transition: ease-in-out 0.5s;
         }
     }
     
@@ -60,10 +64,13 @@
         justify-content: center;
         align-content: center;
         align-items: center;
+        transition: ease-in-out 0.5s;
         li{
             text-decoration: none;
             display: inline;
             padding-left: 50px;
+            letter-spacing: 2px;
+            transition: ease-in-out 0.5s;
             a{
                 color: $cDrkGreen;
                 text-decoration: none;
@@ -80,4 +87,34 @@
             
         }
     }
+
+    @include responsive(mobile tablet){
+        height: 220px;
+        display: block;
+        padding: 0;
+        .header1{
+            height: 150px;
+            justify-content: center;
+            h1{
+                width: 245px;
+                text-align: center;
+                align-items: center;
+                margin-top: -35px;
+            }  
+            h2{
+                margin-top: -75px;
+                justify-content: center;
+            }
+        }
+
+        .header2{
+            padding: 0;
+            li{
+                width: 33.33vw;
+                text-align: center;
+                font-size: 30px;
+                padding: 0;
+            }
+        }
+    };
 }

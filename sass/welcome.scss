@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'media';
 $percentageWhite: 0%;
 $percentageBlack: 70%;
 $whiteColor: #ffffff10;
@@ -21,6 +22,9 @@ body{
         background: radial-gradient(ellipse at center, $whiteColor $percentageWhite,transparent $percentageBlack); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         position: absolute;
         z-index: 3;
+        @include responsive(mobile){
+            height: 15vh;
+        }
     }
 
     #vignette{
@@ -35,6 +39,7 @@ body{
         background: radial-gradient(ellipse at center,  transparent 53%,transparent 53%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         position: absolute;
         z-index: 2;
+
     }
 
     #oldTV{
@@ -95,8 +100,25 @@ body{
         color: rgba(255, 255, 255, 0.322);
         text-shadow: 0 0 5px white, 0 0 1px rgba(255, 255, 255, 0.555);
         z-index: 4;
+        
+        // initially .5
         opacity: 0;
         animation: appear 1s ease-in 10s 1 normal forwards;
+        a{
+            display: none;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.322);
+        }
+         @include responsive(mobile tablet){
+            p{
+                display: none;
+            }
+            a{
+                display: block;
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+        }
     }
 
     @keyframes appear{

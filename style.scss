@@ -5,14 +5,34 @@
 @import 'sass/footer';
 @import 'sass/loading';
 @import 'sass/worker';
+@import 'sass/media';
 
 @font-face {
     font-family: CursiveText;
     src: url(fonts/Blacksword.otf);
 }
+::-webkit-scrollbar {
+    width: 7px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: $cDark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #484848;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+}
 
 body{
     margin: 0;
     background-color: $cDark;
+
+    
 }

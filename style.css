@@ -30,6 +30,19 @@
   }
 }
 
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 .header {
   height: 100px;
   margin: 0;
@@ -48,6 +61,8 @@
           box-shadow: 0px 0px 30px 15px #000000;
   border-bottom: 2px solid #00ECD8;
   cursor: default;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header1 {
@@ -59,6 +74,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header1 h1 {
@@ -72,6 +89,8 @@
   height: 0px;
   text-shadow: 0 0 2px #00ECD8, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #00ECD8, 0 0 20px #00ECD8;
   letter-spacing: 6px;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header1 h1 #broken:before {
@@ -97,6 +116,8 @@
   color: #24A075;
   letter-spacing: 5px;
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 7px rgba(0, 0, 0, 0);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header2 {
@@ -116,12 +137,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header2 li {
   text-decoration: none;
   display: inline;
   padding-left: 50px;
+  letter-spacing: 2px;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .header .header2 li a {
@@ -140,6 +166,56 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .header {
+    height: 220px;
+    display: block;
+    padding: 0;
+  }
+  .header .header1 {
+    height: 150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .header1 h1 {
+    width: 245px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -35px;
+  }
+  .header .header1 h2 {
+    margin-top: -75px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .header2 {
+    padding: 0;
+  }
+  .header .header2 li {
+    width: 33.33vw;
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+  }
+}
+
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 .container {
   margin: 0;
   padding: 0;
@@ -249,6 +325,34 @@
           transform: rotate(10deg);
 }
 
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .container .main {
+    margin-top: 60px;
+    width: 95vw;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+  }
+  .container .mainContacts {
+    width: 95vw;
+    border-radius: 30px;
+    display: block;
+  }
+}
+
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 .footer {
   height: 50px;
   width: 100%;
@@ -269,9 +373,10 @@
   letter-spacing: 3px;
   text-shadow: 0 0 5px black, 0 0 5px black;
   border-top: 1px solid #00ECD8;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   z-index: 0;
+  margin-top: 80px;
 }
 
 .footer #copyrightSign::after {
@@ -279,7 +384,29 @@
   content: '©';
 }
 
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .footer {
+    position: relative;
+    margin-top: 60px;
+    font-size: 13px;
+  }
+}
+
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 .loading {
+  margin-top: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -302,8 +429,8 @@
 }
 
 .loading .loadingText {
+  background-color: transparent;
   font-family: Arial;
-  background-color: #383536;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -318,6 +445,7 @@
 }
 
 .loading .loadingText h1 {
+  width: 754px;
   padding: 0;
   margin: 0;
   font-weight: 900;
@@ -346,6 +474,25 @@
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white, 1px 0px 0 white, 0px 1px 0 white, -1px 0px 0 white, 0px -1px 0 white, 0px 0px 10px black;
   -webkit-transition: ease-in-out 1s;
   transition: ease-in-out 1s;
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .loading .loadingText h1 {
+    width: 375px;
+    -webkit-transition: ease-in-out 1s;
+    transition: ease-in-out 1s;
+  }
+  .loading .loadingText h2 {
+    margin-top: 52px;
+    -webkit-transition: ease-in-out 1s;
+    transition: ease-in-out 1s;
+  }
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  .loading .loadingText {
+    margin-top: -35px;
+  }
 }
 
 .loading #loadingBar {
@@ -971,9 +1118,41 @@
   }
 }
 
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 @font-face {
   font-family: CursiveText;
   src: url(fonts/Blacksword.otf);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1b1c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #484848;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
 }
 
 body {

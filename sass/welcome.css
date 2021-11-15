@@ -30,6 +30,19 @@
   }
 }
 
+/*
+#masthead {
+    background: white;
+    border-bottom:1px solid #eee;
+    height: 90px;
+    padding: 0 20px;
+    @include for_breakpoint(mobile desktop) {
+        height:70px;
+        position:fixed;
+        width:100%;
+        top:0;
+    }
+}*/
 body {
   background-color: #202020;
   margin: 0;
@@ -57,6 +70,12 @@ body #highlight {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   position: absolute;
   z-index: 3;
+}
+
+@media only screen and (max-width: 667px) {
+  body #highlight {
+    height: 15vh;
+  }
 }
 
 body #vignette {
@@ -146,6 +165,23 @@ body .pressKey {
   opacity: 0;
   -webkit-animation: appear 1s ease-in 10s 1 normal forwards;
           animation: appear 1s ease-in 10s 1 normal forwards;
+}
+
+body .pressKey a {
+  display: none;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.322);
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+  body .pressKey p {
+    display: none;
+  }
+  body .pressKey a {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
 }
 
 @-webkit-keyframes appear {

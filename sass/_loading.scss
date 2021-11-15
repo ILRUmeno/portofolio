@@ -1,6 +1,6 @@
-
-
+@import 'media';
 .loading{
+    margin-top: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -13,8 +13,8 @@
     align-items: center;
     z-index: 1;
     .loadingText{
+        background-color: transparent;
         font-family: $primaryFonts;
-        background-color: $cBlack;
         display: grid;
         justify-content: center;
         align-content: center;
@@ -22,6 +22,7 @@
         position: absolute;
         transition: ease-in-out 1s;
         h1{
+            width: 754px;
             padding: 0;
             margin: 0;
             font-weight: 900;
@@ -46,10 +47,29 @@
             letter-spacing: 5px;
             @include outline(white, 1px, black, 10px);
             transition: ease-in-out 1s;
-
+            
         }
 
+        @include responsive(mobile tablet){
+            h1{
+                width: 375px;
+                transition: ease-in-out 1s;
+            }
+            h2{
+                margin-top: 52px;
+                transition: ease-in-out 1s;
+            }
+        };
+        
+
     }
+
+    @include responsive(mobile tablet){
+        .loadingText{
+            margin-top: -35px;
+        }
+    };
+
     #loadingBar{
         width: 100%;
         height: 10px;

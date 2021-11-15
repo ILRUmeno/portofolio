@@ -1,4 +1,4 @@
-
+@import 'media';
 
 .container{
     margin: 0;
@@ -8,7 +8,6 @@
     align-items: center;
     color: white;
     letter-spacing: 3px;
-
     .main{
         margin: 100px auto 0 auto;
         padding: 25px;
@@ -81,4 +80,22 @@
             transform: rotate(10deg);
         }
     }
+
+
+    @include responsive(mobile tablet){
+
+        .main{
+            margin-top: 60px;
+            width: 95vw;
+            height: auto;
+            display: block;
+            border-radius: 30px;
+        }
+
+        .mainContacts{
+            width: 95vw;
+            border-radius: 30px;
+            display: block;
+        }
+    };
 }
