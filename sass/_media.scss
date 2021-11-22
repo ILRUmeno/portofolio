@@ -1,7 +1,7 @@
 $media_queries : ( 
     'mobile': unquote($string: "only screen and (max-width: 667px)"), 
-    'tablet': unquote($string: "only screen and (min-width: 668px) and (max-width: 1054px)"), 
-    'desktop': unquote($string: "only screen and (min-width: 1055px)") 
+    'tablet': unquote($string: "only screen and (min-width: 668px) and (max-width: 1248px)"), 
+    'desktop': unquote($string: "only screen and (min-width: 1249px)") 
 );
 @mixin responsive($breakpoints) {
     $conditions : ();

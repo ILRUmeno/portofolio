@@ -307,7 +307,7 @@ $skin: rgb(255, 230, 193);
         width: 20px;
         height: 15px;
         border-radius: 500px;
-        margin-top: 30px;
+        margin-top: 31px;
         margin-left: 486px;
         border-bottom: 3px solid rgb(68, 68, 68);
         position: absolute;
@@ -328,7 +328,7 @@ $skin: rgb(255, 230, 193);
         width: 20px;
         height: 15px;
         border-radius: 500px;
-        margin-top: 30px;
+        margin-top: 31px;
         margin-left: -6px;
         border-bottom: 3px solid rgb(68, 68, 68);
         position: absolute;
@@ -363,7 +363,11 @@ $skin: rgb(255, 230, 193);
             .stand2{
                 position: initial;
                 margin-right: -7px;
+                margin-top: 30px;
                 float: right;
+            }
+            .stand1{
+                margin-top: 30px;
             }
             .stripeShadow{
                 width: 71.5vw;

@@ -166,9 +166,15 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+.header .header2 li #focused {
+  color: white;
+  text-shadow: 0 0 10px #00ECD8, 0 0 10px #00ECD8;
+  cursor: default;
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .header {
-    height: 274px;
+    height: 314px;
     display: block;
     padding: 0;
   }
@@ -490,7 +496,7 @@
   transition: ease-in-out 0.1s;
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .container .main {
     margin-top: 60px;
     width: 95vw;
@@ -630,7 +636,7 @@
   content: '©';
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .footer {
     position: relative;
     top: 0;
@@ -723,7 +729,7 @@
   transition: ease-in-out 1s;
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .loading .loadingText h1 {
     width: 375px;
     -webkit-transition: ease-in-out 1s;
@@ -736,7 +742,7 @@
   }
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .loading .loadingText {
     margin-top: -35px;
   }
@@ -1211,7 +1217,7 @@ body {
   width: 20px;
   height: 15px;
   border-radius: 500px;
-  margin-top: 30px;
+  margin-top: 31px;
   margin-left: 486px;
   border-bottom: 3px solid #444444;
   position: absolute;
@@ -1232,7 +1238,7 @@ body {
   width: 20px;
   height: 15px;
   border-radius: 500px;
-  margin-top: 30px;
+  margin-top: 31px;
   margin-left: -6px;
   border-bottom: 3px solid #444444;
   position: absolute;
@@ -1261,14 +1267,18 @@ body {
           box-shadow: 0 0 5px 5px black;
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   .stripe {
     width: 70vw;
   }
   .stripe .stand2 {
     position: initial;
     margin-right: -7px;
+    margin-top: 30px;
     float: right;
+  }
+  .stripe .stand1 {
+    margin-top: 30px;
   }
   .stripe .stripeShadow {
     width: 71.5vw;

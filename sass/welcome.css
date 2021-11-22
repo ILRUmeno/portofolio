@@ -173,7 +173,7 @@ body .pressKey a {
   color: rgba(255, 255, 255, 0.322);
 }
 
-@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1054px) {
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
   body .pressKey p {
     display: none;
   }

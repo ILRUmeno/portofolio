@@ -83,13 +83,19 @@
                     cursor: pointer;
                 }
             }
+
+            #focused{
+                color:white;
+                text-shadow: 0 0 10px $cGreen, 0 0 10px $cGreen;
+                cursor: default;
+            }
             
             
         }
     }
 
     @include responsive(mobile tablet){
-        height: 274px;
+        height: 314px;
         display: block;
         padding: 0;
         .header1{
