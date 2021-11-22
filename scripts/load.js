@@ -7,7 +7,7 @@ $(document).ready(function(){
     console.log(sessionStorage.getItem('firstTime'));
     //if(sessionStorage.length == 0){
         
-        sessionStorage.setItem('firstTime', null);
+     //   sessionStorage.setItem('firstTime', null);
     //}
 
     $("body").css("overflow", "hidden");
