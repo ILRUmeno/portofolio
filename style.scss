@@ -141,6 +141,10 @@ body{
 
 @include responsive(mobile tablet){
     
+    .col-sm{
+        padding: 0 !important;
+    }
+
     .card{
         height: 470px;
     }
@@ -151,6 +155,20 @@ body{
     .card-list{
         font-size: 15px;
         margin-top: 17px;
+        display: flex;
+        text-align: center;
+        li{
+            &:nth-child(1){
+                padding-left: 0;
+                &:before{
+                    content:"";
+                }
+            }
+            padding-left: 0px;
+            &:before{
+                content:"/";
+            }
+        }
     }
 
     .card-text{
