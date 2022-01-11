@@ -1457,12 +1457,14 @@ body {
   position: absolute;
   opacity: .7;
   border-radius: 4px;
+  border-bottom: 3px solid #00ECD8;
 }
 
 .card {
   -webkit-transition: ease-in-out 0.1s;
   transition: ease-in-out 0.1s;
   margin-bottom: 30px;
+  height: 290px;
 }
 
 .card:hover {
@@ -1474,7 +1476,9 @@ body {
 
 .card_image {
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
+  margin: 0 !important;
+  border-bottom: none !important;
 }
 
 .card-img-overlay {
@@ -1487,7 +1491,7 @@ body {
 
 .card-text {
   font-weight: 600;
-  margin-top: 15px !important;
+  margin-top: 8px !important;
 }
 
 .card-links {
@@ -1573,5 +1577,27 @@ body {
 
 .card-list li:before {
   content: "/   ";
+}
+
+@media only screen and (max-width: 667px), only screen and (min-width: 668px) and (max-width: 1248px) {
+  .card {
+    height: 470px;
+  }
+  .card-title {
+    font-size: 35px;
+  }
+  .card-list {
+    font-size: 15px;
+    margin-top: 17px;
+  }
+  .card-text {
+    font-size: 22px;
+  }
+  .card-links {
+    bottom: 70px;
+  }
+  .card-links a {
+    font-size: 50px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

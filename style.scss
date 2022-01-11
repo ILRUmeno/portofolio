@@ -44,11 +44,14 @@ body{
     position: absolute;
     opacity: .7;
     border-radius: 4px;
+    border-bottom: 3px solid $cGreen;
 }
 
 .card{
     transition: ease-in-out 0.1s;
     margin-bottom: 30px;
+    
+    height: 290px;
     &:hover{
         transition: ease-in-out 0.1s;
         box-shadow: 0px 0px 7px white, 0px 0px 10px $cGreen, 0px 0px 15px $cGreen;
@@ -57,7 +60,9 @@ body{
 
 .card_image{
     width:  100% !important;
-    height:  auto !important;
+    height:  100% !important;
+    margin: 0 !important;
+    border-bottom: none !important;
 }
 
 .card-img-overlay{
@@ -70,7 +75,7 @@ body{
 
 .card-text{
     font-weight: 600;
-    margin-top: 15px !important;
+    margin-top: 8px !important;
 }
 
 .card-links{
@@ -132,3 +137,30 @@ body{
         }
     }
 }
+
+
+@include responsive(mobile tablet){
+    
+    .card{
+        height: 470px;
+    }
+    .card-title{
+        font-size: 35px;
+    }
+    
+    .card-list{
+        font-size: 15px;
+        margin-top: 17px;
+    }
+
+    .card-text{
+        font-size: 22px;
+    }
+
+    .card-links{
+        bottom: 70px;
+        a{
+            font-size: 50px !important;       
+        }
+    }
+};
