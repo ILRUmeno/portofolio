@@ -5,10 +5,10 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 $(document).ready(function(){
     console.log(sessionStorage.getItem('firstTime'));
-    //if(sessionStorage.length == 0){
+    if(sessionStorage.length == 0){
         
         sessionStorage.setItem('firstTime', null);
-    //}
+    }
 
     $("body").css("overflow", "hidden");
     if(sessionStorage.getItem('firstTime') === "false" && $(".loading").is(":visible")){

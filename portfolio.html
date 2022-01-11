@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--For tooltips-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icon.png">
+        <title>JFP | Portfolio</title>
+        <script src="scripts/load.js"></script>
+        <script src="scripts/tooltips.js"></script>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="loadingText">
+                <h1>Juratu Fabian</h1>
+                <h2>Portfolio</h2>
+            </div>
+            <div id="loadingBar">
+                <div> </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header1">
+                <h1>Juratu Fabia<span id="broken"></span></h1>
+                <h2>Portfolio</h2>
+            </div>
+            <ul class="header2">
+                <li><a href="homepage.html">Homepage</a></li>   
+                <li><a href="info.html">About Me</a></li>
+                <li><a href="#" id="focused">Portfolio</a></li>
+                <li><a href="contact.html" >Conatct</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="mainContacts">
+                <div class="col-sm p-4">
+                    <div class="card bg-dark text-white">
+                        <div class="black-overlay"></div>
+                        <img src="images/scuffed-whatsapp.png" class="card_image"alt="scuffed whatsapp img">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Scuffed Whatsapp</h4>
+                            <ul class="card-list">
+                                <li>html</li>
+                                <li>css</li>
+                                <li>javascript</li>
+                                <li>jquery</li>
+                            </ul>
+                            <p class="card-text mt-4">One of the projects I did during high-school. The objective was getting used to CSS and JS.</p>
+                            <div class="card-links">
+                                <a id="github-pages" data-toggle="tooltip" data-placement="top" title="Github Pages" class="bi bi-box-arrow-up-right card-link" href="https://jfab00.github.io/Scuffed-Whatsapp/"></a>
+                                <a class="bi bi-github" id="github" data-toggle="tooltip" data-placement="top" title="Github Repository" href="https://github.com/JFab00/Scuffed-Whatsapp"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark text-white">
+                        <div class="black-overlay"></div>
+                        <img src="images/qr-shop.png" class="card_image"alt="qr shop img">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">QR Shop</h4>
+                            <ul class="card-list">
+                                <li>html</li>
+                                <li>css</li>
+                                <li>php</li>
+                                <li>postgreSQL</li>
+                            </ul>
+                            <p class="card-text mt-4">The first project we did after learning SQL. Through the use of QR codes you could "buy" stuff by scaning them.</p>
+                            <div class="card-links">
+                                <a id="github-pages" data-toggle="tooltip" data-placement="top" title="Alwaysdata" class="bi bi-box-arrow-up-right card-link" href="https://jfab.alwaysdata.net/qrshop/"></a>
+                                <a class="bi bi-github" id="github" data-toggle="tooltip" data-placement="top" title="Github Repository" href="https://github.com/JFab00/QR-Shop"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm p-4 sColumn">
+                    <div class="card bg-dark text-white">
+                        <div class="black-overlay"></div>
+                        <img src="images/cellphone-list.png" class="card_image"alt="cellphone list img">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Cellphone List</h4>
+                            <ul class="card-list">
+                                <li>java</li>
+                            </ul>
+                            <p class="card-text mt-4">A school project in which we had to create a "database" of mobiles and show them through Java.</p>
+                            <div class="card-links">
+                                <a class="bi bi-github" id="github" data-toggle="tooltip" data-placement="top" title="Github Repository" href="https://github.com/JFab00/Cellphone-list"></a>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <i id="copyrightSign"></i>2021 - 2022 Juratu Fabian All rights reserved
+        </div>
+    </body>
+</html>
