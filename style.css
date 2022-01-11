@@ -1587,7 +1587,7 @@ body {
     height: 470px;
   }
   .card-title {
-    font-size: 35px;
+    font-size: 30px;
   }
   .card-list {
     font-size: 15px;
@@ -1610,10 +1610,10 @@ body {
     content: "/";
   }
   .card-text {
-    font-size: 22px;
+    font-size: 20px;
   }
   .card-links {
-    bottom: 70px;
+    bottom: 50px;
   }
   .card-links a {
     font-size: 50px !important;
